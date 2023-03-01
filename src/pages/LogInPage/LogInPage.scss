@@ -27,6 +27,10 @@
     grid-column-start: 1;
     grid-column-end: 3;
   }
+
+  &__btn {
+    max-height: 56px;
+  }
 }
 
 @media screen and (max-width: $customMobile) {

@@ -2,8 +2,23 @@
   width: 60px;
   height: 80px;
 
-  &_size_s {
+  &_type_short {
     width: 34px;
     height: 52px;
+  }
+
+  &_type_full {
+    width: 265px;
+    height: 45px;
+
+    &_size_m {
+      width: 265px;
+      height: 45px;     
+    }
+
+    &_size_s {
+      width: 224px;
+      height: 38px;     
+    }
   }
 }

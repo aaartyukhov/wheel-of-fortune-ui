@@ -14,83 +14,96 @@ import сoffeeTime from '../images/presents/сoffee-time.png';
 import skyEng from '../images/presents/sky-eng.png';
 import hugs from '../images/presents/hugs.png';
 
-
 const PRESENTS = {
     backpack: {
         name: 'backpack',
         label: 'Альфа-рюкзак',
-        img: backpack
+        img: backpack,
+        footnote: 'Для получения напиши\nКириленко Арине'
     },
     hoodies: {
         name: 'hoodies',
         label: 'Альфа-толстовка',
-        img: hoodies
+        img: hoodies,
+        footnote: 'Для получения напиши\nКириленко Арине'
     },
     rug: {
         name: 'rug',
         label: 'Альфа-плед',
-        img: rug
+        img: rug,
+        footnote: 'Для получения напиши\nКириленко Арине'
     },
     thermos: {
         name: 'thermos',
         label: 'Альфа-термос',
-        img: thermos
+        img: thermos,
+        footnote: 'Для получения напиши\nКириленко Арине'
     },
     socks: {
         name: 'socks',
         label: 'Альфа-носки',
-        img: socks
+        img: socks,
+        footnote: 'Для получения напиши\nКириленко Арине'
     },
     powerBank: {
         name: 'powerBank',
         label: 'Альфа-powerbank',
-        img: powerBank
+        img: powerBank,
+        footnote: 'Для получения напиши\nКириленко Арине'
     },
     slippers: {
         name: 'slippers',
         label: 'Альфа-тапки',
-        img: slippers
+        img: slippers,
+        footnote: 'Для получения напиши\nКириленко Арине'
     },
     wiki: {
         name: 'wiki',
-        label: 'сертификат Викиум',
-        img: wiki
+        label: 'Сертификат Викиум',
+        img: wiki,
+        footnote: 'Для получения напиши\nКириленко Арине'
     },
     endOfWork: {
         name: 'endOfWork',
         label: 'закончить работу\nраньше на\u00A01\u00A0час',
-        img: endOfWork
+        img: endOfWork,
+        footnote: 'Обратись к своему руководителю\nдля\u00A0получения подарка'
     },
     dinner: {
         name: 'dinner',
         label: 'продление обеда\nна\u00A01\u00A0час',
-        img: dinner
+        img: dinner,
+        footnote: 'Обратись к своему руководителю\nдля\u00A0получения подарка'
     },
     placeOfTop: {
         name: 'placeOfTop',
         label: '1 день на рабочем\nместе любого ТОПа',
-        img: placeOfTop
+        img: placeOfTop,
+        footnote: 'Обратись к выбранному ТОПу\nдля\u00A0получения подарка'
     },
     businessTrip: {
         name: 'businessTrip',
         label: 'командировка по\u00A0обмену\nопытом на\u00A01\u00A0день',
-        img: businessTrip
+        img: businessTrip,
+        footnote: 'Обратись к своему руководителю\nдля\u00A0получения подарка'
     },
     сoffeeTime: {
         name: 'сoffeeTime',
         label: 'кофе-пауза\nс\u00A0любым ТОПом',
-        img: сoffeeTime
+        img: сoffeeTime,
+        footnote: 'Обратись к выбранному ТОПу\nдля\u00A0получения подарка'
     },
     skyEng: {
         name: 'skyEng',
         label: 'EnglishBox от\u00A0SkyEng',
         img: skyEng,
-        link: 'https://alfabank.ru/get-money/credit-cards/100-days/'
+        link: 'https://go.skyeng.ru/englishbox_adults/alfaleasing'
     },
     hugs: {
         name: 'hugs',
         label: 'обнимашки',
-        img: hugs
+        img: hugs,
+        footnote: 'Покажи скрин\nподарка коллеге'
     }
 };
 

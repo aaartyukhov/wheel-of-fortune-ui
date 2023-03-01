@@ -2,7 +2,8 @@
 
 .present-page {
   white-space: pre-line;
-  background-image: url("../../images/present-page-background.png");
+  background-color: #E1D9FF;
+  background-image: url('../../images/present-page-background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -61,8 +62,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("../../images/present-stars.png");
-  background-size: contain;
+  background-image: url("../../images/present-page-overlay.png");
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -97,8 +98,8 @@
   .present-page {
     &__present-container {
       padding-top: 80px;
-      min-width: 350px;
-      min-height: 290px;
+      min-width: 380px;
+      min-height: 310px;
     }
 
     &__title {
@@ -119,8 +120,8 @@
     }
 
     &__logo {
-      width: 24px;
-      height: 32px;
+      width: 124px;
+      height: 20px; 
       bottom: 36px;
     }
   }
@@ -131,7 +132,7 @@
     &__present-container {
       padding-top: 60px;
       min-width: 300px;
-      min-height: 240px;
+      min-height: 260px;
     }
 
     &__title {
@@ -152,8 +153,8 @@
     }
 
     &__logo {
-      width: 24px;
-      height: 30px;
+      width: 104px;
+      height: 18px; 
       bottom: 20px;
     }
   }

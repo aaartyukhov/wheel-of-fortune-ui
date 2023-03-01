@@ -10,9 +10,9 @@ import PRESENTS from "../../constants/presents.js";
 const cn = createCn("present-page");
 
 function PresentPage() {
-  const present = "skyEng";
+  const present = "hugs";
 
-  const { label, img } = PRESENTS[present];
+  const { label, img, footnote } = PRESENTS[present];
   const { name: nameSkyEng, link } = PRESENTS.skyEng;
 
   const renderFootnote = () => {
@@ -35,7 +35,7 @@ function PresentPage() {
       default:
         return (
           <p className={cn("footnote")}>
-            {"Приходи за подарком\nв отдел кадров"}
+            { footnote }
           </p>
         );
     }
@@ -49,7 +49,7 @@ function PresentPage() {
           className={cn("title")}
         >{`Поздравляем!\nТвой подарок —\n${label}`}</h1>
         {renderFootnote()}
-        <Logo className={cn("logo")} size="s" />
+        <Logo className={cn("logo")} size="s" type="full"/>
       </section>
     </PageLayout>
   );
