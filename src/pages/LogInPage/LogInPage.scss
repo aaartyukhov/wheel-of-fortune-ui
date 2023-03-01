@@ -1,0 +1,51 @@
+@import "../../mediaQueries.scss";
+
+.login-page {
+  white-space: pre-line;
+
+  &__text {
+    margin: 48px 0 0;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+  }
+
+  &__accent-text {
+    color: #ef3124;
+  }
+
+  &__form {
+    margin-top: 48px;
+    max-width: 470px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  &__input {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+@media screen and (max-width: $customMobile) {
+  .login-page {
+    white-space: normal;
+    padding: 24px;
+
+    &__text {
+      margin: 32px 0 0;
+      font-size: 32px;
+      line-height: 42px;
+    }
+
+    &__form {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      max-width: unset;
+      width: 100%;
+    }
+  }
+}

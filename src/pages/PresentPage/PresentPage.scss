@@ -1,0 +1,160 @@
+@import "../../mediaQueries.scss";
+
+.present-page {
+  white-space: pre-line;
+  background-image: url("../../images/present-page-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__present-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 192px;
+    min-width: 750px;
+    min-height: 590px;
+    background-image: url("../../images/present-container-colored.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    z-index: 2;
+  }
+
+  &__footnote {
+    margin: 24px 0 0;
+    font-size: 18px;
+    line-height: 24px;
+    z-index: 2;
+  }
+
+  &__logo {
+    position: absolute;
+    bottom: 53px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 364px;
+    height: 364px;
+  }
+}
+
+.present-page:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../../images/present-stars.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: $tablet) {
+  .present-page {
+    &__present-container {
+      padding-top: 150px;
+      min-width: 650px;
+      min-height: 490px;
+    }
+
+    &__title {
+      font-size: 35px;
+      line-height: 42px;
+    }
+
+    &__footnote {
+      font-size: 14px;
+      line-height: 18px;
+      z-index: 2;
+    }
+
+    &__img {
+      width: 264px;
+      height: 264px;
+    }
+  }
+}
+
+@media screen and (max-width: $tabletVertical) {
+  .present-page {
+    &__present-container {
+      padding-top: 80px;
+      min-width: 350px;
+      min-height: 290px;
+    }
+
+    &__title {
+      font-size: 22px;
+      line-height: 30px;
+    }
+
+    &__footnote {
+      margin-top: 12px;
+      font-size: 12px;
+      line-height: 16px;
+      z-index: 2;
+    }
+
+    &__img {
+      width: 150px;
+      height: 150px;
+    }
+
+    &__logo {
+      width: 24px;
+      height: 32px;
+      bottom: 36px;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .present-page {
+    &__present-container {
+      padding-top: 60px;
+      min-width: 300px;
+      min-height: 240px;
+    }
+
+    &__title {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    &__footnote {
+      margin-top: 8px;
+      font-size: 12px;
+      line-height: 16px;
+      z-index: 2;
+    }
+
+    &__img {
+      width: 120px;
+      height: 120px;
+    }
+
+    &__logo {
+      width: 24px;
+      height: 30px;
+      bottom: 20px;
+    }
+  }
+}
