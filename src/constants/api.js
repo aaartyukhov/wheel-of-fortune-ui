@@ -4,8 +4,7 @@ const api = {
   auth: `${API_HOST}/users`,
   getUsers: `${API_HOST}/users`,
   getUserPresent: `${API_HOST}/users/:id/get-present`,
-  addPresent: `${API_HOST}/presents`,
-  getPresents: `${API_HOST}/users`,
+  getPresents: `${API_HOST}/presents`,
 
 };
 

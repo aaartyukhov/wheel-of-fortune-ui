@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { createCn } from 'bem-react-classname';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router';
+import { Navigate, useNavigate } from 'react-router';
 import Wheel from '../../components/Wheel/Wheel.jsx';
 import {
   sendUserPresentRequest,
   userGetPresentStatusSelector,
+  userSelector,
 } from '../../store/state/user';
 import { CORNER_SECTOR, requestStatuses, SPINE_TIME } from '../../constants/common';
 import ROUTES from '../../constants/routes';
@@ -21,9 +22,15 @@ const MainPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const spineDeg = (randomInteger(1, 15) * CORNER_SECTOR) + 3600;
-
   const statusGetPresent = useSelector(userGetPresentStatusSelector);
+
+  const user = useSelector(userSelector);
+
+  if (!user) {
+    return <Navigate to={ ROUTES.errorPage }/>;
+  }
+
+  const spineDeg = (randomInteger(1, 15) * CORNER_SECTOR) + 3600;
 
   const handleClickSpin = () => {
     dispatch(sendUserPresentRequest());

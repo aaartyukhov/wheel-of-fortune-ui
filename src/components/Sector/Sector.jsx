@@ -20,6 +20,6 @@ function Sector({ corner, text }) {
 export default Sector;
 
 Sector.propTypes = {
-  text: PropTypes.string,
+  text: PropTypes.number,
   corner: PropTypes.number,
 };

@@ -4,6 +4,7 @@ const ROUTES = {
   mainPage: '/main',
   presentPage: '/present',
   errorPage: '/error',
+  resultPage: '/result',
   other: '*',
 };
 

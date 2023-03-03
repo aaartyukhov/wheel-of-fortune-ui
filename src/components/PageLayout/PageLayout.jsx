@@ -6,7 +6,11 @@ import './PageLayout.scss';
 
 function PageLayout({ className, children }) {
   const cn = createCn('page', className);
-  return <main className={cn()}>{children}</main>;
+  return (
+    <main className={cn()}>
+      <div className={cn('content')}>{children}</div>
+    </main>
+  );
 }
 
 PageLayout.propTypes = {

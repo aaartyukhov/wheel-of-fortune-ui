@@ -6,21 +6,21 @@ import { Link } from '@alfalab/core-components-link';
 import Logo from '../../components/Logo/Logo.jsx';
 
 import './PresentPage.scss';
-import PageLayout from '../../components/PageLayout/PageLayout.jsx';
 import PRESENTS from '../../constants/presents';
 import { userSelector } from '../../store/state/user.js';
 import ROUTES from '../../constants/routes.js';
+import PageLayoutCenter from '../../components/PageLayoutCenter/PageLayoutCenter.jsx';
 
 const cn = createCn('present-page');
 
 function PresentPage() {
-  const { present } = useSelector(userSelector);
+  const user = useSelector(userSelector);
 
-  if (!present) {
+  if (!user) {
     return <Navigate to={ ROUTES.errorPage }/>;
   }
 
-  const { name: presentName } = present;
+  const { name: presentName } = user.present;
 
   const { label, img, footnote } = PRESENTS[presentName];
   const { name: nameSkyEng, link } = PRESENTS.skyEng;
@@ -52,7 +52,7 @@ function PresentPage() {
   };
 
   return (
-    <PageLayout className={cn()}>
+    <PageLayoutCenter className={cn()}>
       <section className={cn('present-container')}>
         <img className={cn('img')} src={img} alt="img" />
         <h1
@@ -61,7 +61,7 @@ function PresentPage() {
         {renderFootnote()}
         <Logo className={cn('logo')} size="s" type="full"/>
       </section>
-    </PageLayout>
+    </PageLayoutCenter>
   );
 }
 

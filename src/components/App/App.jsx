@@ -6,6 +6,7 @@ import ErrorPage from '../../pages/ErrorPage/ErrorPage.jsx';
 import LogInPage from '../../pages/LogInPage/LogInPage.jsx';
 import MainPage from '../../pages/MainPage/MainPage.jsx';
 import PresentPage from '../../pages/PresentPage/PresentPage.jsx';
+import ResultPage from '../../pages/ResultPage/ResultPage.jsx';
 
 function App() {
   return (
@@ -23,10 +24,12 @@ function App() {
 
       <Route path={ROUTES.errorPage} element={<ErrorPage />} />
 
-      {/* <Route
+      <Route path={ROUTES.resultPage} element={<ResultPage />} />
+
+      <Route
         path={ROUTES.other}
         element={<Navigate to={ROUTES.errorPage} replace />}
-      /> */}
+      />
     </Routes>
   );
 }

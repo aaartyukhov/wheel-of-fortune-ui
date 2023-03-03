@@ -4,7 +4,7 @@ import { Input } from '@alfalab/core-components-input';
 import { createCn } from 'bem-react-classname';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import PageLayout from '../../components/PageLayout/PageLayout.jsx';
+import PageLayoutCenter from '../../components/PageLayoutCenter/PageLayoutCenter.jsx';
 import Logo from '../../components/Logo/Logo.jsx';
 
 import {
@@ -71,7 +71,7 @@ function LogInPage() {
   }, [user]);
 
   return (
-    <PageLayout className={cn()}>
+    <PageLayoutCenter className={cn()}>
       <Logo type="full" />
       <p className={cn('text')}>
         {'Введи корпоративную почту\nи крути '}
@@ -102,7 +102,7 @@ function LogInPage() {
           Войти
         </Button>
       </form>
-    </PageLayout>
+    </PageLayoutCenter>
   );
 }
 
