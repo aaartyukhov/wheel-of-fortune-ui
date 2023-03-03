@@ -1,17 +1,17 @@
-import React from "react";
-import PropTypes from "prop-types";
-import logoShort from "../../images/logo-short.png";
-import logoFull from "../../images/logo-full.png";
-import { createCn } from "bem-react-classname";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { createCn } from 'bem-react-classname';
+import logoShort from '../../images/logo-short.png';
+import logoFull from '../../images/logo-full.png';
 
-import "./Logo.scss";
+import './Logo.scss';
 
-function Logo({ className, type = 'short', size='m' }) {
-  const cn = createCn("logo", className);
+function Logo({ className, type = 'short', size = 'm' }) {
+  const cn = createCn('logo', className);
   return (
     <img
       className={cn({ type, size })}
-      src={type === "short" ? logoShort : logoFull}
+      src={type === 'short' ? logoShort : logoFull}
       alt="лого"
     />
   );

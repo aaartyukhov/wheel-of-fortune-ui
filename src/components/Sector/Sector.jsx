@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 import { createCn } from 'bem-react-classname';
-import "./Sector.scss";
+import './Sector.scss';
 
-const cn = createCn("sector");
+const cn = createCn('sector');
 
 function Sector({ corner, text }) {
   return (
@@ -11,8 +11,8 @@ function Sector({ corner, text }) {
       className={cn()}
       style={{ transform: `translateX(-50%) rotate(${corner}deg)` }}
     >
-      <div  className={cn("present")}></div>
-      <span  className={cn("text")}>{ text }</span>
+      <div className={cn('present')}></div>
+      <span className={cn('text')}>{ text }</span>
     </article>
   );
 }

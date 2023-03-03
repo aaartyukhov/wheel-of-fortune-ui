@@ -1,11 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 import { createCn } from 'bem-react-classname';
 
-import "./PageLayout.scss";
+import './PageLayout.scss';
 
 function PageLayout({ className, children }) {
-  const cn = createCn("page", className);
+  const cn = createCn('page', className);
   return <main className={cn()}>{children}</main>;
 }
 

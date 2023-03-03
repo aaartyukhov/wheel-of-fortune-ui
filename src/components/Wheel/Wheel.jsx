@@ -1,65 +1,70 @@
-import React, { useEffect, useState } from "react";
-import { Button } from "@alfalab/core-components-button";
-import { createCn } from "bem-react-classname";
-import PropTypes from "prop-types";
-import "./Wheel.scss";
-import Sector from "../Sector/Sector.jsx";
-import { SPINE_COUNT, SPINE_TIME } from "../../constants/common";
-import Logo from "../Logo/Logo.jsx";
-import { mediaQueries, useMatchMedia } from "../../hooks/useMatchMedia.jsx";
+import React, { useEffect } from 'react';
+import { Button } from '@alfalab/core-components-button';
+import { createCn } from 'bem-react-classname';
+import PropTypes from 'prop-types';
+import './Wheel.scss';
+import Sector from '../Sector/Sector.jsx';
+import Logo from '../Logo/Logo.jsx';
+import { mediaQueries, useMatchMedia } from '../../hooks/useMatchMedia.jsx';
+import { CORNER_SECTOR } from '../../constants/common';
 
-function Wheel({ className, onStopSpin }) {
-  const cn = createCn("wheel", className);
-
-  const [isSpined, setIsSpined] = useState(false);
+function Wheel({
+  className,
+  isLoading,
+  isSpined,
+  onClickSpin,
+  onStopSpin,
+  spinTime,
+  spineDeg,
+}) {
+  const cn = createCn('wheel', className);
 
   const isMobile = useMatchMedia(mediaQueries.customMobile);
 
   useEffect(() => {
     if (isSpined) {
       setTimeout(() => {
-        if (typeof onStopSpin === "function") {
+        if (typeof onStopSpin === 'function') {
           onStopSpin();
         }
-      }, SPINE_TIME);
+      }, spinTime + 1000);
     }
   }, [isSpined]);
 
   return (
     <article className={cn()}>
       <div
-        className={cn("sectors")}
+        className={cn('sectors')}
         style={{
-          transition: `transform ${SPINE_TIME / 1000}s`,
-          transform: isSpined ?  '' : `rotate(${SPINE_COUNT * 360}deg)`,
+          transition: `transform ${spinTime / 1000}s`,
+          transform: isSpined ? `rotate(-${spineDeg}deg)` : '',
         }}
       >
-        {new Array(15).fill(null).map((_, index) => {
-          return <Sector key={index} text={index + 1} corner={index * 24} />;
-        })}
+        {new Array(15).fill(null).map((_, index) => (
+          <Sector key={index} text={index + 1} corner={index * CORNER_SECTOR} />
+        ))}
       </div>
 
-      <div className={cn("controls")}>
+      <div className={cn('controls')}>
         {isSpined ? (
-          <div className={cn("logo-container")}>
+          <div className={cn('logo-container')}>
             <Logo className={cn('logo')} color="red" />
-            <h1 className={cn("title")}>может повезёт?</h1>
+            <h1 className={cn('title')}>может повезёт?</h1>
           </div>
         ) : (
           <>
-            <h1 className={cn("title")}>{"Испытай\nсвою удачу"}</h1>
+            <h1 className={cn('title')}>{'Испытай\nсвою удачу'}</h1>
             <Button
-              className={cn("btn")}
+              className={cn('btn')}
               view="primary"
-              onClick={() => {
-                setIsSpined(true);
-              }}
+              onClick={onClickSpin}
               size={isMobile ? 'xxs' : 'm'}
+              loading={isLoading}
             >
               Крутить
             </Button>
-            <p className={cn("footnote")}>
-              {"Крутить колесо можно\nтолько один раз"}
+            <p className={cn('footnote')}>
+              {'Крутить колесо можно\nтолько один раз'}
             </p>
           </>
         )}
@@ -71,6 +76,11 @@ function Wheel({ className, onStopSpin }) {
 Wheel.propTypes = {
   className: PropTypes.string,
   onStopSpin: PropTypes.func,
+  isLoading: PropTypes.bool,
+  onClickSpin: PropTypes.func,
+  isSpined: PropTypes.bool,
+  spinTime: PropTypes.number,
+  spineDeg: PropTypes.number,
 };
 
 export default Wheel;

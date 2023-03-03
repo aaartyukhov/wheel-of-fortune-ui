@@ -1,26 +1,36 @@
-import React from "react";
-import { createCn } from "bem-react-classname";
-import { Link } from "@alfalab/core-components-link";
-import Logo from "../../components/Logo/Logo.jsx";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { Navigate } from 'react-router';
+import { createCn } from 'bem-react-classname';
+import { Link } from '@alfalab/core-components-link';
+import Logo from '../../components/Logo/Logo.jsx';
 
-import "./PresentPage.scss";
-import PageLayout from "../../components/PageLayout/PageLayout.jsx";
-import PRESENTS from "../../constants/presents.js";
+import './PresentPage.scss';
+import PageLayout from '../../components/PageLayout/PageLayout.jsx';
+import PRESENTS from '../../constants/presents';
+import { userSelector } from '../../store/state/user.js';
+import ROUTES from '../../constants/routes.js';
 
-const cn = createCn("present-page");
+const cn = createCn('present-page');
 
 function PresentPage() {
-  const present = "hugs";
+  const { present } = useSelector(userSelector);
 
-  const { label, img, footnote } = PRESENTS[present];
+  if (!present) {
+    return <Navigate to={ ROUTES.errorPage }/>;
+  }
+
+  const { name: presentName } = present;
+
+  const { label, img, footnote } = PRESENTS[presentName];
   const { name: nameSkyEng, link } = PRESENTS.skyEng;
 
   const renderFootnote = () => {
-    switch (present) {
+    switch (presentName) {
       case nameSkyEng:
         return (
-          <p className={cn("footnote")}>
-            {"Пройти обучение можно здесь "}
+          <p className={cn('footnote')}>
+            {'Пройти обучение можно здесь '}
             <Link
               view="default"
               rel="noopener"
@@ -34,7 +44,7 @@ function PresentPage() {
 
       default:
         return (
-          <p className={cn("footnote")}>
+          <p className={cn('footnote')}>
             { footnote }
           </p>
         );
@@ -43,13 +53,13 @@ function PresentPage() {
 
   return (
     <PageLayout className={cn()}>
-      <section className={cn("present-container")}>
-        <img className={cn("img")} src={img} alt="img" />
+      <section className={cn('present-container')}>
+        <img className={cn('img')} src={img} alt="img" />
         <h1
-          className={cn("title")}
+          className={cn('title')}
         >{`Поздравляем!\nТвой подарок —\n${label}`}</h1>
         {renderFootnote()}
-        <Logo className={cn("logo")} size="s" type="full"/>
+        <Logo className={cn('logo')} size="s" type="full"/>
       </section>
     </PageLayout>
   );
