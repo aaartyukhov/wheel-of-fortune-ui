@@ -20,7 +20,10 @@ function PresentPage() {
   //   return <Navigate to={ ROUTES.logInPage }/>;
   // }
 
-  const { name: presentName } = user.present;
+  // eslint-disable-next-line no-unused-vars
+  const { name: presentName1 } = user.present;
+
+  const presentName = 'backpack';
 
   const { label, img, footnote } = PRESENTS[presentName];
   const { name: nameSkyEng, link } = PRESENTS.skyEng;
