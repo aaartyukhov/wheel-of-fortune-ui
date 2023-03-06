@@ -23,6 +23,15 @@
   }
 }
 
+@media screen and (max-width: $tabletVertical) {
+  .main-page {
+ 
+    &__wheel {
+      top: 30%;
+    }
+  }
+}
+
 @media screen and (max-width: $mobile) {
   .main-page {
  
