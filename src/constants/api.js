@@ -1,4 +1,4 @@
-const API_HOST = 'http://localhost:3000';
+const API_HOST = 'https://api.alfa-wheel.ru';
 
 const api = {
   auth: `${API_HOST}/users`,
