@@ -1,4 +1,4 @@
-const API_HOST = 'https://api.alfa-wheel.ru';
+const API_HOST = 'https://api.alfa-wheel.ru/api';
 
 const api = {
   auth: `${API_HOST}/users`,
