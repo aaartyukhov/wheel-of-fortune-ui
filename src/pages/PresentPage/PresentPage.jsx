@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Navigate } from 'react-router';
+// import { Navigate } from 'react-router';
 import { createCn } from 'bem-react-classname';
 import { Link } from '@alfalab/core-components-link';
 import Logo from '../../components/Logo/Logo.jsx';
@@ -8,7 +8,7 @@ import Logo from '../../components/Logo/Logo.jsx';
 import './PresentPage.scss';
 import PRESENTS from '../../constants/presents';
 import { userSelector } from '../../store/state/user.js';
-import ROUTES from '../../constants/routes.js';
+// import ROUTES from '../../constants/routes.js';
 import PageLayoutCenter from '../../components/PageLayoutCenter/PageLayoutCenter.jsx';
 
 const cn = createCn('present-page');

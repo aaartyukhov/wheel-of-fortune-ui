@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { createCn } from 'bem-react-classname';
 import { useDispatch, useSelector } from 'react-redux';
-import { Navigate, useNavigate } from 'react-router';
+// import { Navigate, useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
 import Wheel from '../../components/Wheel/Wheel.jsx';
 import {
   sendUserPresentRequest,
   userGetPresentStatusSelector,
-  userSelector,
+  // userSelector,
 } from '../../store/state/user';
 import { CORNER_SECTOR, requestStatuses, SPINE_TIME } from '../../constants/common';
 import ROUTES from '../../constants/routes';
@@ -24,7 +25,7 @@ const MainPage = () => {
 
   const statusGetPresent = useSelector(userGetPresentStatusSelector);
 
-  const user = useSelector(userSelector);
+  // const user = useSelector(userSelector);
 
   // if (!user) {
   //   return <Navigate to={ ROUTES.logInPage }/>;
