@@ -49,3 +49,12 @@
     }
   }
 }
+
+@media screen and (max-width: $mobile-s) {
+  .main-page {
+ 
+    &__wheel {
+      top: 45%;
+    }
+  }
+}
