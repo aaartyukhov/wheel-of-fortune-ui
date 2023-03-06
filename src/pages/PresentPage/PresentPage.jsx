@@ -16,9 +16,9 @@ const cn = createCn('present-page');
 function PresentPage() {
   const user = useSelector(userSelector);
 
-  if (!user) {
-    return <Navigate to={ ROUTES.logInPage }/>;
-  }
+  // if (!user) {
+  //   return <Navigate to={ ROUTES.logInPage }/>;
+  // }
 
   const { name: presentName } = user.present;
 
