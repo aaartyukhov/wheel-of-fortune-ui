@@ -13,7 +13,7 @@ function App() {
     <Routes>
       <Route
         path={ROUTES.default}
-        element={<Navigate to={ROUTES.logInPage} replace />}
+        element={<Navigate to={ROUTES.mainPage} replace />}
       />
 
       <Route path={ROUTES.logInPage} element={<LogInPage />} />
