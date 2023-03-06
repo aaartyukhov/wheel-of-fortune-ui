@@ -2,8 +2,8 @@
 
 .present-page {
   white-space: pre-line;
-  background-color: #E1D9FF;
-  background-image: url('../../images/present-page-background.png');
+  background-color: #e1d9ff;
+  background-image: url("../../images/present-page-background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 192px;
+    padding-top: 150px;
     min-width: 650px;
     min-height: 490px;
     background-image: url("../../images/present-container-colored.png");
@@ -26,15 +26,15 @@
   &__title {
     margin: 0;
     font-weight: 500;
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 35px;
+    line-height: 42px;
     z-index: 2;
   }
 
   &__footnote {
     margin: 24px 0 0;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 18px;
     z-index: 2;
   }
 
@@ -68,32 +68,6 @@
   background-repeat: no-repeat;
 }
 
-@media screen and (max-width: $tablet) {
-  .present-page {
-    &__present-container {
-      padding-top: 150px;
-      min-width: 650px;
-      min-height: 490px;
-    }
-
-    &__title {
-      font-size: 35px;
-      line-height: 42px;
-    }
-
-    &__footnote {
-      font-size: 14px;
-      line-height: 18px;
-      z-index: 2;
-    }
-
-    &__img {
-      width: 264px;
-      height: 264px;
-    }
-  }
-}
-
 @media screen and (max-width: $tabletVertical) {
   .present-page {
     &__present-container {
@@ -121,7 +95,7 @@
 
     &__logo {
       width: 124px;
-      height: 20px; 
+      height: 20px;
       bottom: 36px;
     }
   }
@@ -154,7 +128,7 @@
 
     &__logo {
       width: 104px;
-      height: 18px; 
+      height: 18px;
       bottom: 20px;
     }
   }
