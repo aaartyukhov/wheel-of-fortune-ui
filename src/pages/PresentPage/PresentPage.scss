@@ -14,8 +14,8 @@
     flex-direction: column;
     align-items: center;
     padding-top: 192px;
-    min-width: 750px;
-    min-height: 590px;
+    min-width: 650px;
+    min-height: 490px;
     background-image: url("../../images/present-container-colored.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -40,7 +40,7 @@
 
   &__logo {
     position: absolute;
-    bottom: 53px;
+    bottom: 80px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -50,8 +50,8 @@
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 364px;
-    height: 364px;
+    width: 264px;
+    height: 264px;
   }
 }
 

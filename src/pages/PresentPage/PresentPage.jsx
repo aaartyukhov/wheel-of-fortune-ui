@@ -30,7 +30,7 @@ function PresentPage() {
       case nameSkyEng:
         return (
           <p className={cn('footnote')}>
-            {'Пройти обучение можно здесь '}
+            {'Пройти обучение можно '}
             <Link
               view="default"
               rel="noopener"

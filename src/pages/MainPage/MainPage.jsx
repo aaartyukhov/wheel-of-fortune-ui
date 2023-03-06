@@ -30,7 +30,7 @@ const MainPage = () => {
     return <Navigate to={ ROUTES.logInPage }/>;
   }
 
-  const spineDeg = (randomInteger(1, 15) * CORNER_SECTOR) + 3600;
+  const spineDeg = (randomInteger(1, 15) * CORNER_SECTOR) + 1440;
 
   const handleClickSpin = () => {
     dispatch(sendUserPresentRequest());
