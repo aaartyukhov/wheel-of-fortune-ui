@@ -27,7 +27,7 @@ const MainPage = () => {
   const user = useSelector(userSelector);
 
   if (!user) {
-    return <Navigate to={ ROUTES.errorPage }/>;
+    return <Navigate to={ ROUTES.logInPage }/>;
   }
 
   const spineDeg = (randomInteger(1, 15) * CORNER_SECTOR) + 3600;

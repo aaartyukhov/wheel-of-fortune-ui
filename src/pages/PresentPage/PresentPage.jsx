@@ -17,7 +17,7 @@ function PresentPage() {
   const user = useSelector(userSelector);
 
   if (!user) {
-    return <Navigate to={ ROUTES.errorPage }/>;
+    return <Navigate to={ ROUTES.logInPage }/>;
   }
 
   const { name: presentName } = user.present;
