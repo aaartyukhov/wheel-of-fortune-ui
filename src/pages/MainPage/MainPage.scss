@@ -27,16 +27,16 @@
   .main-page {
  
     &__wheel {
-      top: 30%;
+      top: 40%;
     }
   }
 }
 
-@media screen and (max-width: $mobile) {
-  .main-page {
+// @media screen and (max-width: $mobile) {
+//   .main-page {
  
-    &__wheel {
-      top: 60%;
-    }
-  }
-}
+//     &__wheel {
+//       top: 60%;
+//     }
+//   }
+// }
