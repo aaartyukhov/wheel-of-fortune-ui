@@ -3,9 +3,9 @@ import { Button } from '@alfalab/core-components-button';
 import { createCn } from 'bem-react-classname';
 import PropTypes from 'prop-types';
 import './Wheel.scss';
-import Sector from '../Sector/Sector.jsx';
-import Logo from '../Logo/Logo.jsx';
-import { mediaQueries, useMatchMedia } from '../../hooks/useMatchMedia.jsx';
+import Sector from '../Sector/Sector';
+import Logo from '../Logo/Logo';
+import { mediaQueries, useMatchMedia } from '../../hooks/useMatchMedia';
 import { CORNER_SECTOR } from '../../constants/common';
 
 function Wheel({

@@ -9,14 +9,14 @@ import {
   allPresentsSelector,
   getPresentsRequest,
 } from '../../store/state/presents';
-import PageLayout from '../../components/PageLayout/PageLayout.jsx';
+import PageLayout from '../../components/PageLayout/PageLayout';
 
 const cn = createCn('result-page');
 
 const idUsersTab = 'tab-users';
 const idPresentsTab = 'tab-presents';
 
-const ResultPage = () => {
+function ResultPage() {
   const [selectedTab, setSelectedTab] = useState(idUsersTab);
   const dispatch = useDispatch();
 
@@ -31,7 +31,6 @@ const ResultPage = () => {
 
   const users = useSelector(allUsersSelector);
   const presents = useSelector(allPresentsSelector);
-
 
   return (
     <PageLayout className={cn()}>
@@ -62,6 +61,6 @@ const ResultPage = () => {
       </ul>
     </PageLayout>
   );
-};
+}
 
 export default ResultPage;

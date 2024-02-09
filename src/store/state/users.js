@@ -27,9 +27,7 @@ const usersSlice = createSlice({
 
 const rootSelector = (state) => state.users;
 
-export const { selectAll: allUsersSelector } =
-usersAdapter.getSelectors(rootSelector);
-
+export const { selectAll: allUsersSelector } = usersAdapter.getSelectors(rootSelector);
 
 export const {
   getUsersRequest,

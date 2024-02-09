@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { createCn } from 'bem-react-classname';
 import { useDispatch, useSelector } from 'react-redux';
 import { Navigate, useNavigate } from 'react-router';
-import Wheel from '../../components/Wheel/Wheel.jsx';
+import Wheel from '../../components/Wheel/Wheel';
 import {
   sendUserPresentRequest,
   userGetPresentStatusSelector,
@@ -12,11 +12,11 @@ import { CORNER_SECTOR, requestStatuses, SPINE_TIME } from '../../constants/comm
 import ROUTES from '../../constants/routes';
 
 import './MainPage.scss';
-import randomInteger from '../../utils/random.js';
+import randomInteger from '../../utils/random';
 
 const cn = createCn('main-page');
 
-const MainPage = () => {
+function MainPage() {
   const [isSpined, setIsSpined] = useState(false);
 
   const dispatch = useDispatch();
@@ -27,7 +27,7 @@ const MainPage = () => {
   const user = useSelector(userSelector);
 
   if (!user) {
-    return <Navigate to={ ROUTES.logInPage }/>;
+    return <Navigate to={ROUTES.logInPage} />;
   }
 
   const spineDeg = (randomInteger(1, 15) * CORNER_SECTOR) + 720;
@@ -55,10 +55,10 @@ const MainPage = () => {
         onClickSpin={handleClickSpin}
         onStopSpin={handleStopSpin}
         spinTime={SPINE_TIME}
-        spineDeg={ spineDeg }
+        spineDeg={spineDeg}
       />
     </main>
   );
-};
+}
 
 export default MainPage;

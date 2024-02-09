@@ -1,11 +1,10 @@
-const API_HOST = 'https://api.alfa-wheel.ru';
+const { REACT_APP_API_HOST } = process.env;
 
 const api = {
-  auth: `${API_HOST}/users`,
-  getUsers: `${API_HOST}/users`,
-  getUserPresent: `${API_HOST}/users/:id/get-present`,
-  getPresents: `${API_HOST}/presents`,
-
+  auth: `${REACT_APP_API_HOST}/users`,
+  getUsers: `${REACT_APP_API_HOST}/users`,
+  getUserPresent: `${REACT_APP_API_HOST}/users/:id/get-present`,
+  getPresents: `${REACT_APP_API_HOST}/presents`,
 };
 
 export default api;

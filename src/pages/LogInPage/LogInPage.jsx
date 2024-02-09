@@ -4,8 +4,8 @@ import { Input } from '@alfalab/core-components-input';
 import { createCn } from 'bem-react-classname';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import PageLayoutCenter from '../../components/PageLayoutCenter/PageLayoutCenter.jsx';
-import Logo from '../../components/Logo/Logo.jsx';
+import PageLayoutCenter from '../../components/PageLayoutCenter/PageLayoutCenter';
+import Logo from '../../components/Logo/Logo';
 
 import {
   sendLoginRequest,
@@ -81,7 +81,7 @@ function LogInPage() {
         <Input
           className={cn('input')}
           placeholder="mail@alfaleasing.ru"
-          block={true}
+          block
           size="m"
           onChange={(e) => {
             setEmail(e.target.value);
@@ -94,7 +94,7 @@ function LogInPage() {
         <Button
           className={cn('btn')}
           view="primary"
-          block={true}
+          block
           type="submit"
           size="m"
           loading={statusLogin === requestStatuses.loading}

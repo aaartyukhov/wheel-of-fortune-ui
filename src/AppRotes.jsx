@@ -1,14 +1,14 @@
 import React from 'react';
 
 import { Navigate, Route, Routes } from 'react-router-dom';
-import ROUTES from '../../constants/routes';
-import ErrorPage from '../../pages/ErrorPage/ErrorPage.jsx';
-import LogInPage from '../../pages/LogInPage/LogInPage.jsx';
-import MainPage from '../../pages/MainPage/MainPage.jsx';
-import PresentPage from '../../pages/PresentPage/PresentPage.jsx';
-import ResultPage from '../../pages/ResultPage/ResultPage.jsx';
+import ROUTES from './constants/routes';
+import ErrorPage from './pages/ErrorPage/ErrorPage';
+import LogInPage from './pages/LogInPage/LogInPage';
+import MainPage from './pages/MainPage/MainPage';
+import PresentPage from './pages/PresentPage/PresentPage';
+import ResultPage from './pages/ResultPage/ResultPage';
 
-function App() {
+function AppRotes() {
   return (
     <Routes>
       <Route
@@ -34,4 +34,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppRotes;

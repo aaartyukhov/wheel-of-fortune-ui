@@ -11,7 +11,7 @@ function Sector({ corner, text }) {
       className={cn()}
       style={{ transform: `translateX(-50%) rotate(${corner}deg)` }}
     >
-      <div className={cn('present')}></div>
+      <div className={cn('present')} />
       <span className={cn('text')}>{ text }</span>
     </article>
   );

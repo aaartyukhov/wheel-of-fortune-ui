@@ -26,4 +26,3 @@ function* getUsers() {
 export default function* watchGetUsers() {
   yield takeEvery(getUsersRequest.type, getUsers);
 }
-

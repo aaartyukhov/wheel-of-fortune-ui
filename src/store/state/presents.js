@@ -27,8 +27,7 @@ const presentsSlice = createSlice({
 
 const rootSelector = (state) => state.presents;
 
-export const { selectAll: allPresentsSelector } =
-presentsAdapter.getSelectors(rootSelector);
+export const { selectAll: allPresentsSelector } = presentsAdapter.getSelectors(rootSelector);
 
 export const {
   getPresentsRequest,

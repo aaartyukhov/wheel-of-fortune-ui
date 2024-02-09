@@ -26,4 +26,3 @@ function* getPresents() {
 export default function* watchGetUsers() {
   yield takeEvery(getPresentsRequest.type, getPresents);
 }
-

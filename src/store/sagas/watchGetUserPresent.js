@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { put, takeEvery, select } from 'redux-saga/effects';
 import api from '../../constants/api';
-import { constructUrl } from '../../utils/url';
+import constructUrl from '../../utils/url';
 import {
   sendUserPresentFail,
   sendUserPresentRequest,
