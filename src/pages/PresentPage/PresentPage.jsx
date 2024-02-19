@@ -2,7 +2,6 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router';
 import { createCn } from 'bem-react-classname';
-import { Link } from '@alfalab/core-components-link';
 import Logo from '../../components/Logo/Logo';
 
 import './PresentPage.scss';
@@ -22,37 +21,21 @@ function PresentPage() {
 
   const { name: presentName } = user.present;
 
-  const { label, img, footnote } = PRESENTS[presentName];
-  const { name: nameSkyEng, link } = PRESENTS.skyEng;
-
-  const renderFootnote = () => {
-    switch (presentName) {
-      case nameSkyEng:
-        return (
-          <p className={cn('footnote')}>
-            {'Пройти обучение можно '}
-            <Link view="default" rel="noopener" target="_blank" href={link}>
-              здесь
-            </Link>
-          </p>
-        );
-
-      default:
-        return <p className={cn('footnote')}>{footnote}</p>;
-    }
-  };
+  const { label, img, getFootnote } = PRESENTS[presentName];
 
   return (
     <PageLayoutCenter className={cn()}>
       <section className={cn('present-container')}>
-        <img className={cn('img')} src={img} alt="img" />
+        <img className={cn('img')} src={img} alt="Подарок" />
         <h1
           className={cn('title')}
         >
           {`Поздравляем!\nТвой подарок —\n${label}`}
         </h1>
-        {renderFootnote()}
-        <Logo className={cn('logo')} size="s" type="full" />
+        <div className={cn('footnote-container')}>
+          <p className={cn('footnote')}>{getFootnote()}</p>
+          <Logo className={cn('logo')} size="s" type="full" />
+        </div>
       </section>
     </PageLayoutCenter>
   );

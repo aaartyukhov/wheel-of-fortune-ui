@@ -25,5 +25,6 @@ module.exports = {
     'no-underscore-dangle': ['error', { allow: ['_id'] }],
     'react/no-array-index-key': ['off'],
     'react/require-default-props': ['off'],
+    'react/react-in-jsx-scope': ['off'],
   },
 };

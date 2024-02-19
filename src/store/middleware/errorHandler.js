@@ -1,3 +1,5 @@
+// TODO Добавить централизованную обработку ошибок
+
 // import ROUTES from '../../constants/routes';
 
 const errorHandlerMiddleware = () => (next) => (action) => next(action);
