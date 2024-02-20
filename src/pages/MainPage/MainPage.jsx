@@ -37,7 +37,7 @@ function MainPage() {
   };
 
   const handleStopSpin = () => {
-    navigate(ROUTES.presentPage);
+    navigate(ROUTES.presentPage, { replace: true });
   };
 
   useEffect(() => {
