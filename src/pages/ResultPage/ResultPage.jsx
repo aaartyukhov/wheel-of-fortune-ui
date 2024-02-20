@@ -10,6 +10,7 @@ import {
   getPresentsRequest,
 } from '../../store/state/presents';
 import PageLayout from '../../components/PageLayout/PageLayout';
+import PRESENTS from '../../constants/presents';
 
 const cn = createCn('result-page');
 
@@ -42,19 +43,22 @@ function ResultPage() {
         {selectedTab === idUsersTab
           ? users.map((user) => {
             const { email, present, _id } = user;
+            const { label: labelPresent } = PRESENTS[present?.name];
             return (
               <li key={_id}>
                 <h3>{email}</h3>
-                <p>{`приз: ${present ? present.description : 'не играл'}`}</p>
+                <p>{`приз: ${labelPresent || 'не играл'}`}</p>
               </li>
             );
           })
-          : presents.map((user) => {
-            const { description, count, _id } = user;
+          : presents.map((present) => {
+            const {
+              name, isInfinity, count, _id,
+            } = present;
             return (
               <li key={_id}>
-                <h3>{description}</h3>
-                <p>{`Осталось: ${count}`}</p>
+                <h3>{PRESENTS[name]?.label}</h3>
+                { isInfinity ? <p>Неограниченно</p> : <p>{`Осталось: ${count}`}</p>}
               </li>
             );
           })}

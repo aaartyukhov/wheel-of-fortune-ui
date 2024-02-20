@@ -1,4 +1,6 @@
-const { REACT_APP_API_HOST } = process.env;
+import { API_HOST_DEFAULT } from '../defaultEnv';
+
+const { REACT_APP_API_HOST = API_HOST_DEFAULT } = process.env;
 
 const api = {
   auth: `${REACT_APP_API_HOST}/users`,
