@@ -43,7 +43,7 @@ function ResultPage() {
         {selectedTab === idUsersTab
           ? users.map((user) => {
             const { email, present, _id } = user;
-            const { label: labelPresent } = PRESENTS[present?.name];
+            const { label: labelPresent } = PRESENTS[present?.name] || {};
             return (
               <li key={_id}>
                 <h3>{email}</h3>
