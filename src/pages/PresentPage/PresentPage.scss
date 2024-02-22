@@ -9,6 +9,7 @@
   background-repeat: no-repeat;
 
   &__present-container {
+    z-index: 2;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -29,7 +30,7 @@
     font-weight: 500;
     font-size: 35px;
     line-height: 42px;
-    z-index: 2;
+
   }
 
   &__footnote-container {
@@ -41,9 +42,8 @@
 
   &__footnote {
     margin: 0;
-    font-size: 14px;
-    line-height: 18px;
-    z-index: 2;
+    font-size: 22px;
+    line-height: 24px;
   }
 
   &__img {
@@ -85,7 +85,6 @@
     &__footnote {
       font-size: 12px;
       line-height: 16px;
-      z-index: 2;
     }
 
     &__img {
